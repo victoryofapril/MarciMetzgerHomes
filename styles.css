@@ -1,0 +1,3151 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0 auto;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 98vh;
+    max-height: 1176px;
+    background-image: url(assets/mtn_falls_pond.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: relative;     
+}
+
+.hamburger {
+    display: none;
+    z-index: 10001; 
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-icon {
+    display: none;
+}
+
+.no-scroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mobile-nav-links {
+    width: 100%;
+    height: 100vh;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    transform: translateX(100%); 
+    z-index: 9999;
+    gap: 4rem;
+    background-color: black;
+    font-family: 'Jeju Myeongjo', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-nav-links.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-nav-links-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.mobile-nav-links-list li a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* .mobile-call-now {
+    width: 12rem;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: normal;
+    color: #01A3EB;
+    cursor: pointer;
+}
+
+.mobile-call-now img {
+    width: 1.2rem;
+    height: 1.2rem;
+} */
+
+.nav-links {
+    display: flex;
+    position: absolute;      
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    gap: 4rem;
+    list-style: none;
+    font-family: 'Jeju Myeongjo', sans-serif;
+    font-size: 1.25rem;;
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.call-now,
+.search-now {
+    width: 9rem;
+    height: 2.75rem;
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    gap: 0.375rem;
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    color: #01A3EB;
+    cursor: pointer;
+}
+
+.call-now img,
+.search-now img {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.logo img {
+    width: 19.25rem;
+    height: 6rem;
+}
+
+.hero-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-35%);
+}
+
+.agent {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    display: inline-block;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 8rem;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+}
+
+h2.company, 
+h2.site {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+}
+
+.search-listings-form {
+    width: 87%;
+    max-width: 997px;
+    min-height: 16.0625rem;
+    margin: 0 auto;
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-75%);
+    z-index: 999;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); 
+    border: solid 1px rgba(255, 255, 255, 0.2); 
+    border-radius: 24px;
+    font-family: "Instrument Sans", sans-serif;
+    color: white;
+}
+
+.search-listings-title {
+    margin: 0;
+    padding: 0.75rem;
+    align-self: flex-start;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: normal; 
+}
+
+.search-listings-grid {
+    padding: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0.75rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.search-listings-dropdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.75rem;
+    background-image: url(assets/mdi-light_chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 24px center;
+    background-color: rgba(0,0,0,0.25);
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.search-listings-price-range {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button,
+input[type=number] {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.search-listings-price-range input {
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: solid 1px white;
+    border-left: none;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.search-listings-price-range input::placeholder {
+    color: white;
+}
+
+.search-listings-price-range span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-listings-button {
+    padding: 0.75rem;
+    align-self: flex-end;
+}
+
+.metrics {
+    width: auto;
+    min-height: 16.75rem;
+    margin-top: -18rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    background-color: black;
+    color: white;
+}
+
+.experience h3,
+.leading h3,
+.sold h3 {
+    margin-bottom: 0;
+    font-family: 'Jeju Myeongjo', sans-serif;
+    font-size: 6rem;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+}
+
+.experience p,
+.leading p,
+.sold p {
+    font-family: 'Jeju Myeongjo', 'sans-serif';
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+}
+
+.achievements {
+    display: flex;
+    flex-direction: row;
+}
+
+.marci-metzger {
+    width: 32.13rem;
+    height: 37.88rem;
+    margin: 16rem 6rem 0rem 6rem;
+    border: none;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.achievement-cards {
+    margin: 4rem 6rem 24rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 2rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: normal;
+}
+
+.top-residential-sales,
+.get-it-sold,
+.guide-to-buyers {
+    width: 30.38rem;
+    min-height: 15.75rem;
+    padding: 1rem;
+    border: solid 1px rgba(0,0,0,0.25);
+    border-radius: 12px;
+}
+
+.top-residential-sales img,
+.get-it-sold img,
+.guide-to-buyers img {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 1rem;
+    background-color: black;
+    border: none;
+    border-radius: 100px;
+}
+
+.achievement-cards h6 {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.achievement-cards p {
+    margin-top: -3rem;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.services-and-gallery {
+    background-color: black;
+}
+
+.services {
+    padding: 4rem;
+}
+
+.services h3 {
+    margin-top: -16rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+    color: black;
+}
+
+.services-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.real-estate-done-right,
+.commercial-and-residential,
+.rely-on-expertise {
+    width: 24rem;
+    height: 28.75rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 -16px 16.4px 0 rgba(0,0,0,0.1);
+}
+
+.real-estate-done-right img,
+.commercial-and-residential img,
+.rely-on-expertise img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border: none;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.services h6 {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.25rem;
+    color: black
+}
+
+.services p {
+    margin-top: -4rem;
+    padding: 1rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    color: black
+}
+
+.gallery {
+    margin-left: 6rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.gallery h3 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+    color: white;
+    text-wrap: nowrap;
+}
+
+.gallery-cards {
+    width: fit-content; 
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.gallery-cards section {
+    width: 22rem;
+    height: 43.63rem;
+    margin-left: -8rem; 
+    flex-shrink: 0;
+    border-radius: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.gallery-cards section:first-child {
+    margin-left: 0; 
+}
+
+
+.gallery-cards section:hover {
+    width: calc(22rem + 8rem * (5 - 1)); 
+    margin-left: 0;
+    z-index: 10;
+}
+
+.gallery-cards section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    filter: brightness(50%);
+    transition: all 0.5s ease;
+}
+
+.gallery-cards section:hover img {
+    filter: brightness(100%);
+}
+
+.brands-and-contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.brands {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16rem;
+}
+
+.brands img {
+    width: 6.25rem;
+    height: auto;
+}
+
+.contact-us {
+    width: 100%;
+    max-width: 1346px;
+    aspect-ratio: 1346 / 897; 
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 24px;
+}
+
+.contact-us::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: url(assets/pahrump-home-hero1.jpg) center/cover no-repeat;
+    filter: brightness(50%);
+    z-index: 0;
+}
+
+.contact-us > * {
+    position: relative;
+    z-index: 1; 
+}
+
+.contact-us h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+    color: white;
+}
+
+.contact-us h3 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.left-content {
+    padding: 2rem;
+}
+
+.left-content h3 {
+    margin-bottom: 2rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.left-content p {
+    margin-top: -1rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.right-content {
+    width: 40%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); 
+    border: solid 1px rgba(255, 255, 255, 0.2); 
+    border-radius: 24px;
+}
+
+.right-content h2 {
+    margin-bottom: 3rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    color: white;
+}
+
+.right-content p,
+.right-content input {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.right-content p {
+    margin-top: -2rem;
+}
+
+.right-content input {
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.25);
+    border: none;
+    border-radius: 12px;
+}
+
+.reach-out-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem;
+}
+
+.full-name {
+    display: contents;
+}
+
+.reach-out-form input[type="text"],
+.reach-out-form input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.25);
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.reach-out-form input[type="email"] {
+    grid-column: 1 / -1; 
+}
+
+.reach-out-form textarea {
+    width: 100%;
+    max-width: 100%;
+    grid-column: 1 / -1; 
+    height: 45vh;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.25);
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+    resize: none; 
+}
+
+.reach-out-form button.submit {
+    grid-column: 1 / -1; 
+    height: 3rem;
+    border: none;
+    border-radius: 100px;
+    background-color: white;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.25rem;
+    color: #01A3EB;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    color: white;
+}
+
+.social-media {
+    display: flex;            
+    align-items: center; 
+    gap: 1rem;   
+}
+
+.social-media img {
+    width: 2rem;
+    height: auto;
+    cursor: pointer;
+}
+
+@media (min-width: 2560px) {
+    .reach-out-form textarea {
+    width: 100%;
+    max-width: 100%;
+    grid-column: 1 / -1; 
+    height: 35vh;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.25);
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+    resize: none; 
+    }
+}
+
+@media (max-width: 2559px) {
+    .reach-out-form textarea {
+    width: 100%;
+    max-width: 100%;
+    grid-column: 1 / -1; 
+    height: 35vh;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.25);
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+    resize: none; 
+    }
+}
+
+@media (max-width: 1439px) {
+    .hamburger {
+        display: block;
+    }
+
+        .hamburger-icon,
+    .close-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    nav > .nav-links,
+    nav > .call-now {
+        display: none;
+    }
+
+    .gallery {
+        margin-left: 6rem; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .gallery h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+        text-wrap: nowrap;
+    }
+
+    .gallery-cards {
+        width: fit-content; 
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .gallery-cards section {
+        width: 20rem;
+        height: 43.63rem;
+        margin-left: -8rem; 
+        flex-shrink: 0;
+        border-radius: 24px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:first-child {
+        margin-left: 0; 
+    }
+
+
+    .gallery-cards section:hover {
+        width: calc(22rem + 8rem * (5 - 1)); 
+        margin-left: 0;
+        z-index: 10;
+    }
+
+    .gallery-cards section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+        filter: brightness(50%);
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:hover img {
+        filter: brightness(100%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .top-residential-sales,
+    .get-it-sold,
+    .guide-to-buyers {
+        width: 30rem;
+        min-height: 15.75rem;
+        padding: 1rem;
+        border: solid 1px rgba(0,0,0,0.25);
+        border-radius: 12px;
+    }
+
+    .gallery {
+        margin-left: 6rem; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .gallery h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+        text-wrap: nowrap;
+    }
+
+    .gallery-cards {
+        width: fit-content; 
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .gallery-cards section {
+        width: 17rem;
+        height: 43.63rem;
+        margin-left: -8rem; 
+        flex-shrink: 0;
+        border-radius: 24px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:first-child {
+        margin-left: 0; 
+    }
+
+
+    .gallery-cards section:hover {
+        width: calc(22rem + 8rem * (5 - 1)); 
+        margin-left: 0;
+        z-index: 10;
+    }
+
+    .gallery-cards section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+        filter: brightness(50%);
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:hover img {
+        filter: brightness(100%);
+    }
+}
+
+@media (max-width: 1179px) {
+    .top-residential-sales,
+    .get-it-sold,
+    .guide-to-buyers {
+        width: 25rem;
+        min-height: 15.75rem;
+        padding: 1rem;
+        border: solid 1px rgba(0,0,0,0.25);
+        border-radius: 12px;
+    }
+
+    .brands img {
+    width: 4rem;
+    height: auto;
+    }
+}
+
+@media (max-width: 1099px) {
+    .top-residential-sales,
+    .get-it-sold,
+    .guide-to-buyers {
+        width: 20rem;
+        min-height: 15.75rem;
+        padding: 1rem;
+        border: solid 1px rgba(0,0,0,0.25);
+        border-radius: 12px;
+    }
+
+    .brands {
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 12rem;
+    }
+
+    .brands img {
+        width: 4rem;
+        height: auto;
+    }
+
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 30vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+}
+
+@media (max-width: 1037px) {
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 25vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+}
+
+@media (max-width: 1019px) {
+    .achievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .achievement-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-style: normal;
+    }
+
+    .top-residential-sales,
+    .get-it-sold,
+    .guide-to-buyers {
+        width: 20rem;
+        min-height: 15.75rem;
+        padding: 1rem;
+        border: solid 1px rgba(0,0,0,0.25);
+        border-radius: 12px;
+    }
+
+    .services-and-gallery {
+    background-color: black;
+}
+
+    .services {
+        padding: 4rem;
+    }
+
+    .services h3 {
+        margin-top: -16rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: black;
+    }
+
+    .services-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .real-estate-done-right,
+    .commercial-and-residential,
+    .rely-on-expertise {
+        width: 24rem;
+        height: 28.75rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border: none;
+        border-radius: 24px;
+        box-shadow: 0 -16px 16.4px 0 rgba(0,0,0,0.1);
+    }
+
+    .real-estate-done-right img,
+    .commercial-and-residential img,
+    .rely-on-expertise img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        border: none;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+
+    .services h6 {
+        margin-top: 1rem;
+        padding: 1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.25rem;
+        color: black
+    }
+
+    .services p {
+        margin-top: -4rem;
+        padding: 1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1rem;
+        color: black
+    }
+}
+
+@media (max-width: 995px) {
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 15vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+}
+
+@media (max-width: 930px) {
+    .search-listings-form {
+        width: 50%;
+        max-width: 997px;
+        min-height: 16.0625rem;
+        margin-top: 12rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-75%);
+        z-index: 999;
+        gap: 0.75rem;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+        font-family: "Instrument Sans", sans-serif;
+        color: white;
+    }
+
+    .search-listings-title {
+        margin: 0;
+        padding: 0.75rem;
+        align-self: flex-start;
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: normal; 
+    }
+
+    .search-listings-grid {
+        padding: 0.75rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 0.75rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .search-listings-price-range {
+        display: flex;
+        flex-direction: row;
+        color: white;
+    }
+
+    .search-listings-price-range input {
+        padding: 1rem;
+        background: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: solid 1px white;
+        border-left: none;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+    }
+
+    .search-listings-price-range span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-listings-button {
+        align-self: center;
+        padding: 0.75rem;
+    }
+
+    .metrics {
+    width: auto;
+    min-height: 16.75rem;
+    margin-top: -50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    background-color: black;
+    color: white;
+    }
+
+    .experience h3 {
+        margin-top: 30rem;
+    }
+
+    .experience p,
+    .leading p,
+    .sold p {
+        font-family: 'Jeju Myeongjo', 'sans-serif';
+        font-size: 1.25rem;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .gallery {
+        margin-left: 6rem; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .gallery h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+        text-wrap: nowrap;
+    }
+
+    .gallery-cards {
+        width: fit-content; 
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .gallery-cards section {
+        width: 15rem;
+        height: 30rem;
+        margin-left: -8rem; 
+        flex-shrink: 0;
+        border-radius: 24px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:first-child {
+        margin-left: 0; 
+    }
+
+
+    .gallery-cards section:hover {
+        width: calc(22rem + 8rem * (5 - 1)); 
+        margin-left: 0;
+        z-index: 10;
+    }
+
+    .gallery-cards section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+        filter: brightness(50%);
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:hover img {
+        filter: brightness(100%);
+    }
+}
+
+@media (max-width: 890px) {
+        .reach-out-form textarea {
+            width: 100%;
+            max-width: 100%;
+            grid-column: 1 / -1; 
+            height: 15vh;
+            padding: 1rem;
+            background-color: rgba(0,0,0,0.25);
+            border: none;
+            border-radius: 12px;
+            box-sizing: border-box;
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.75);
+            resize: none; 
+        }
+    }
+
+    @media (max-width: 879px) {
+    .contact-us {
+        width: 100%;
+        max-width: 1346px;
+        aspect-ratio: 1346 / 897; 
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 24px;
+    }
+
+    .contact-us::before {
+        content: "";
+        position: absolute;
+        inset: 0; 
+        background: url(assets/pahrump-home-hero1.jpg) center/cover no-repeat;
+        filter: brightness(50%);
+        z-index: 0;
+    }
+
+    .contact-us > * {
+        position: relative;
+        z-index: 1; 
+    }
+
+    .contact-us h2 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .contact-us h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .left-content {
+        padding: 2rem;
+    }
+
+    .left-content h3 {
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.7rem;
+        color: white;
+    }
+
+    .left-content p {
+        margin-top: -1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content {
+        width: 90%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+    }
+
+    .right-content h2 {
+        margin-bottom: 3rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .right-content p,
+    .right-content input {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content p {
+        margin-top: -2rem;
+    }
+
+    .right-content input {
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+    }
+
+    .reach-out-form {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1.5rem;
+    }
+
+    .full-name {
+        display: contents;
+    }
+
+    .reach-out-form input[type="text"],
+    .reach-out-form input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .reach-out-form input[type="email"] {
+        grid-column: 1 / -1; 
+    }
+
+    .reach-out-form button.submit {
+        grid-column: 1 / -1; 
+        height: 2rem;
+        border: none;
+        border-radius: 100px;
+        background-color: white;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.1rem;
+        color: #01A3EB;
+        cursor: pointer;
+}
+
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 15vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+}
+
+@media (max-width: 850px) {
+    .hero-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-35%);
+    }
+
+    .agent {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        display: inline-block;
+        border-top: solid 2px white;
+        border-bottom: solid 2px white;
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 6rem;
+        font-weight: bold;
+        font-style: normal;
+        color: white;
+    }
+
+    h2.company, 
+    h2.site {
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: normal;
+        color: white;
+    }
+
+    .search-listings-form {
+        width: 30%;
+        max-width: 997px;
+        min-height: 16.0625rem;
+        margin-top: 12rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-75%);
+        z-index: 999;
+        gap: 0.75rem;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+        font-family: "Instrument Sans", sans-serif;
+        color: white;
+    }
+
+    .search-listings-title {
+        margin: 0;
+        padding: 0.75rem;
+        align-self: flex-start;
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: normal; 
+    }
+
+    .search-listings-grid {
+        padding: 0.75rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 0.75rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .search-listings-price-range {
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+    .search-listings-price-range input {
+        padding: 1rem;
+        background: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: solid 1px white;
+        border-left: none;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+    }
+
+    .search-listings-price-range span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-listings-button {
+        align-self: center;
+        padding: 0.75rem;
+    }
+
+    .metrics {
+        width: auto;
+        min-height: 16.75rem;
+        margin-top: -55rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4rem;
+        background-color: black;
+        color: white;
+    }
+
+    .experience h3 {
+        margin-top: 30rem;
+    }
+
+    .experience p,
+    .leading p,
+    .sold p {
+        font-family: 'Jeju Myeongjo', 'sans-serif';
+        font-size: 1.25rem;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .brands {
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10rem;
+    }
+
+    .brands img {
+        width: 4rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 819px) {
+    .contact-us {
+        width: 100%;
+        max-width: 1346px;
+        aspect-ratio: 1346 / 897; 
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 24px;
+    }
+
+    .contact-us::before {
+        content: "";
+        position: absolute;
+        inset: 0; 
+        background: url(assets/pahrump-home-hero1.jpg) center/cover no-repeat;
+        filter: brightness(50%);
+        z-index: 0;
+    }
+
+    .contact-us > * {
+        position: relative;
+        z-index: 1; 
+    }
+
+    .contact-us h2 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .contact-us h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .left-content {
+        padding: 2rem;
+    }
+
+    .left-content h3 {
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.7rem;
+        color: white;
+    }
+
+    .left-content p {
+        margin-top: -1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content {
+        width: 90%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+    }
+
+    .right-content h2 {
+        margin-bottom: 3rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .right-content p,
+    .right-content input {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content p {
+        margin-top: -2rem;
+    }
+
+    .right-content input {
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+    }
+
+    .reach-out-form {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1.5rem;
+    }
+
+    .full-name {
+        display: contents;
+    }
+
+    .reach-out-form input[type="text"],
+    .reach-out-form input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+        height: 2.5rem;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .reach-out-form input[type="email"] {
+        grid-column: 1 / -1; 
+    }
+
+    .reach-out-form button.submit {
+        grid-column: 1 / -1; 
+        height: 2rem;
+        border: none;
+        border-radius: 100px;
+        background-color: white;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.1rem;
+        color: #01A3EB;
+        cursor: pointer;
+}
+
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 10vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+}
+
+@media (max-width: 768px) {
+        .hero-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-35%);
+    }
+
+    .agent {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        display: inline-block;
+        border-top: solid 2px white;
+        border-bottom: solid 2px white;
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 4rem;
+        font-weight: bold;
+        font-style: normal;
+        color: white;
+    }
+
+    h2.company, 
+    h2.site {
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: normal;
+        color: white;
+    }
+
+    .marci-metzger {
+    width: 25rem;
+    height: 30rem;
+    margin: 16rem 6rem 0rem 6rem;
+    border: none;
+    border-radius: 12px;
+    object-fit: cover;
+    }
+
+    .gallery {
+        margin-left: 6rem; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .gallery h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+        text-wrap: nowrap;
+    }
+
+    .gallery-cards {
+        width: fit-content; 
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .gallery-cards section {
+        width: 14rem;
+        height: 30rem;
+        margin-left: -8rem; 
+        flex-shrink: 0;
+        border-radius: 24px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:first-child {
+        margin-left: 0; 
+    }
+
+
+    .gallery-cards section:hover {
+        width: calc(22rem + 8rem * (5 - 1)); 
+        margin-left: 0;
+        z-index: 10;
+    }
+
+    .gallery-cards section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+        filter: brightness(50%);
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:hover img {
+        filter: brightness(100%);
+    }
+
+    .brands {
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 8rem;
+    }
+
+    .brands img {
+        width: 4rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 703px) {
+    .gallery {
+        margin-left: 6rem; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .gallery h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+        text-wrap: nowrap;
+    }
+
+    .gallery-cards {
+        width: fit-content; 
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .gallery-cards section {
+        width: 12rem;
+        height: 20rem;
+        margin-left: -8rem; 
+        flex-shrink: 0;
+        border-radius: 24px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:first-child {
+        margin-left: 0; 
+    }
+
+
+    .gallery-cards section:hover {
+        width: calc(22rem + 8rem * (5 - 1)); 
+        margin-left: 0;
+        z-index: 10;
+    }
+
+    .gallery-cards section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+        filter: brightness(50%);
+        transition: all 0.5s ease;
+    }
+
+    .gallery-cards section:hover img {
+        filter: brightness(100%);
+    }
+
+    .brands {
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 6rem;
+    }
+
+    .brands img {
+        width: 4rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 697px) {
+    .contact-us {
+        width: 100%;
+        max-width: 1346px;
+        aspect-ratio: 1346 / 897; 
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 24px;
+    }
+
+    .contact-us::before {
+        content: "";
+        position: absolute;
+        inset: 0; 
+        background: url(assets/pahrump-home-hero1.jpg) center/cover no-repeat;
+        filter: brightness(50%);
+        z-index: 0;
+    }
+
+    .contact-us > * {
+        position: relative;
+        z-index: 1; 
+    }
+
+    .contact-us h2 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .contact-us h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .left-content {
+        padding: 2rem;
+    }
+
+    .left-content h3 {
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.7rem;
+        color: white;
+    }
+
+    .left-content p {
+        margin-top: -1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content {
+        width: 90%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+    }
+
+    .right-content h2 {
+        margin-bottom: 3rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .right-content p,
+    .right-content input {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content p {
+        margin-top: -2rem;
+    }
+
+    .right-content input {
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+    }
+
+    .reach-out-form {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem;
+    }
+
+    .full-name {
+        display: contents;
+    }
+
+    .reach-out-form input[type="text"],
+    .reach-out-form input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+        height: 2rem;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .reach-out-form input[type="email"] {
+        grid-column: 1 / -1; 
+    }
+
+    .reach-out-form button.submit {
+        grid-column: 1 / -1; 
+        height: 2rem;
+        border: none;
+        border-radius: 100px;
+        background-color: white;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.1rem;
+        color: #01A3EB;
+        cursor: pointer;
+}
+
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 10vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+}
+
+@media (max-width: 592px) {
+    .contact-us {
+        width: 100%;
+        max-width: 1346px;
+        aspect-ratio: 1346 / 897; 
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 24px;
+    }
+
+    .contact-us::before {
+        content: "";
+        position: absolute;
+        inset: 0; 
+        background: url(assets/pahrump-home-hero1.jpg) center/cover no-repeat;
+        filter: brightness(50%);
+        z-index: 0;
+    }
+
+    .contact-us > * {
+        position: relative;
+        z-index: 1; 
+    }
+
+    .contact-us h2 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .contact-us h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .left-content {
+        padding: 2rem;
+    }
+
+    .left-content h3 {
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.7rem;
+        color: white;
+    }
+
+    .left-content p {
+        margin-top: -1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content {
+        width: 90%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+    }
+
+    .right-content h2 {
+        margin-top: -.75rem;
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .right-content p,
+    .right-content input {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content p {
+        margin-top: -2rem;
+    }
+
+    .right-content input {
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+    }
+
+    .reach-out-form {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem;
+    }
+
+    .full-name {
+        display: contents;
+    }
+
+    .reach-out-form input[type="text"],
+    .reach-out-form input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+        height: 1.5rem;
+        padding: .5rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: .75rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .reach-out-form input[type="email"] {
+        grid-column: 1 / -1; 
+    }
+
+    .reach-out-form button.submit {
+        grid-column: 1 / -1; 
+        height: 1.5rem;
+        border: none;
+        border-radius: 100px;
+        background-color: white;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: .75rem;
+        color: #01A3EB;
+        cursor: pointer;
+}
+
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 5vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: .75rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-35%);
+    }
+
+    .agent {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        display: inline-block;
+        border-top: solid 2px white;
+        border-bottom: solid 2px white;
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 3rem;
+        font-weight: bold;
+        font-style: normal;
+        color: white;
+    }
+
+    h2.company, 
+    h2.site {
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-style: normal;
+        color: white;
+    }
+
+    .search-listings-form {
+        width: 50%;
+        max-width: 997px;
+        min-height: 16.0625rem;
+        margin-top: 12rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-75%);
+        z-index: 999;
+        gap: 0.75rem;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+        font-family: "Instrument Sans", sans-serif;
+        color: white;
+    }
+
+    .search-listings-title {
+        margin: 0;
+        padding: 0.75rem;
+        align-self: flex-start;
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 500;
+        font-style: normal; 
+    }
+
+    .search-listings-grid {
+        padding: 0.75rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 0.75rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .search-listings-price-range {
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+    .search-listings-price-range input {
+        padding: 1rem;
+        background: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: solid 1px white;
+        border-left: none;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+    }
+
+    .search-listings-price-range span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-listings-button {
+        align-self: center;
+        padding: 0.75rem;
+    }
+
+    .metrics {
+        width: auto;
+        min-height: 16.75rem;
+        margin-top: -55rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4rem;
+        background-color: black;
+        color: white;
+    }
+
+    .experience h3 {
+        margin-top: 30rem;
+    }
+
+    .experience p,
+    .leading p,
+    .sold p {
+        font-family: 'Jeju Myeongjo', 'sans-serif';
+        font-size: 1.25rem;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .services-and-gallery {
+    background-color: black;
+}
+
+    .services {
+        padding: 4rem;
+    }
+
+    .services h3 {
+        margin-top: -16rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: black;
+    }
+
+    .services-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .real-estate-done-right,
+    .commercial-and-residential,
+    .rely-on-expertise {
+        width: 17rem;
+        height: 28.75rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border: none;
+        border-radius: 24px;
+        box-shadow: 0 -16px 16.4px 0 rgba(0,0,0,0.1);
+    }
+
+    .real-estate-done-right img,
+    .commercial-and-residential img,
+    .rely-on-expertise img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        border: none;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+
+    .services h6 {
+        margin-top: 1rem;
+        padding: 1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.25rem;
+        color: black
+    }
+
+    .services p {
+        margin-top: -4rem;
+        padding: 1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1rem;
+        color: black
+    }
+
+    .gallery-cards section {
+        width: 9rem;
+        height: 17rem;
+        margin-left: -8rem; 
+        flex-shrink: 0;
+        border-radius: 24px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+
+    .gallery h3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2rem;
+        color: white;
+    }
+    .gallery {
+        margin-left: 2rem; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .brands {
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 4rem;
+    }
+
+    .brands img {
+        width: 4rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 592px) {
+    .contact-us {
+        width: 100%;
+        max-width: 1346px;
+        aspect-ratio: 1346 / 897; 
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 24px;
+    }
+
+    .contact-us::before {
+        content: "";
+        position: absolute;
+        inset: 0; 
+        background: url(assets/pahrump-home-hero1.jpg) center/cover no-repeat;
+        filter: brightness(50%);
+        z-index: 0;
+    }
+
+    .contact-us > * {
+        position: relative;
+        z-index: 1; 
+    }
+
+    .contact-us h2 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .contact-us h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .left-content {
+        padding: 2rem;
+    }
+
+    .left-content h3 {
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .left-content p {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: .5rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content {
+        width: 90%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+    }
+
+    .right-content h2 {
+        margin-top: -.75rem;
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .right-content p,
+    .right-content input {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 0.5rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content p {
+        margin-top: -2rem;
+    }
+
+    .right-content input {
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+    }
+
+    .reach-out-form {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: .5rem;
+    }
+
+    .full-name {
+        display: contents;
+    }
+
+    .reach-out-form input[type="text"],
+    .reach-out-form input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+        height: 1rem;
+        padding: .5rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: .5rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .reach-out-form input[type="email"] {
+        grid-column: 1 / -1; 
+    }
+
+    .reach-out-form button.submit {
+        grid-column: 1 / -1; 
+        height: 1.5rem;
+        border: none;
+        border-radius: 100px;
+        background-color: white;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: .5rem;
+        color: #01A3EB;
+        cursor: pointer;
+}
+
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 5vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: .5rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+}
+
+@media (max-width: 425px) {
+    .logo img {
+        width: 12rem;
+        height: 4rem;
+    }
+
+    .marci-metzger {
+    width: 15rem;
+    height: 20rem;
+    margin: 16rem 6rem 0rem 6rem;
+    border: none;
+    border-radius: 12px;
+    object-fit: cover;
+    }
+
+    .brands {
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+
+    .brands img {
+        width: 3rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo img {
+        width: 9rem;
+        height: 3rem;
+    }
+
+    .marci-metzger {
+    width: 15rem;
+    height: 20rem;
+    margin: 16rem 6rem 0rem 6rem;
+    border: none;
+    border-radius: 12px;
+    object-fit: cover;
+    }
+
+    .achievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .achievement-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-style: normal;
+    }
+
+    .top-residential-sales,
+    .get-it-sold,
+    .guide-to-buyers {
+        width: 15rem;
+        min-height: 15.75rem;
+        padding: 1rem;
+        border: solid 1px rgba(0,0,0,0.25);
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 373px) {
+    .search-listings-form {
+        width: 40%;
+        max-width: 997px;
+        min-height: 16.0625rem;
+        margin-top: 12rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-75%);
+        z-index: 999;
+        gap: 0.75rem;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+        font-family: "Instrument Sans", sans-serif;
+        color: white;
+    }
+
+    .search-listings-title {
+        margin: 0;
+        align-self: flex-start;
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        font-style: normal; 
+    }
+
+    .search-listings-grid {
+        width: auto;
+        overflow: hidden;
+        padding: 0.5rem;
+        display: grid;        
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 0.75rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .search-listings-dropdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 70%;
+    min-height: 2.75rem;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(20%);
+    background-image: url(assets/mdi-light_chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 24px center;
+    background-color: rgba(0,0,0,0.25);
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: .75rem;
+    color: rgba(255, 255, 255, 0.75);
+    }
+
+    .search-listings-price-range {
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+    .search-listings-price-range input {
+        padding: 1rem;
+        background: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: solid 1px white;
+        border-left: none;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: .75rem;
+        color: white;
+        text-align: center;
+    }
+
+    .search-listings-price-range span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-listings-button {
+        align-self: center;
+        padding: 0.75rem;
+    }
+
+    .metrics {
+        width: auto;
+        min-height: 16.75rem;
+        margin-top: -55rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4rem;
+        background-color: black;
+        color: white;
+    }
+
+    .experience h3 {
+        margin-top: 30rem;
+    }
+
+    .experience p,
+    .leading p,
+    .sold p {
+        font-family: 'Jeju Myeongjo', 'sans-serif';
+        font-size: 1.25rem;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+    }
+
+.contact-us {
+        width: 100%;
+        max-width: 1346px;
+        aspect-ratio: 1346 / 897; 
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 24px;
+    }
+
+    .contact-us::before {
+        content: "";
+        position: absolute;
+        inset: 0; 
+        background: url(assets/pahrump-home-hero1.jpg) center/cover no-repeat;
+        filter: brightness(50%);
+        z-index: 0;
+    }
+
+    .contact-us > * {
+        position: relative;
+        z-index: 1; 
+    }
+
+    .contact-us h2 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .contact-us h3 {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .left-content {
+        padding: 2rem;
+    }
+
+    .left-content h3 {
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .left-content p {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: .5rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content {
+        width: 90%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(12px); 
+        -webkit-backdrop-filter: blur(12px); 
+        border: solid 1px rgba(255, 255, 255, 0.2); 
+        border-radius: 24px;
+    }
+
+    .right-content h2 {
+        margin-top: -.75rem;
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .right-content p,
+    .right-content input {
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 0.5rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .right-content p {
+        margin-top: -2rem;
+    }
+
+    .right-content input {
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+    }
+
+    .reach-out-form {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: .5rem;
+    }
+
+    .full-name {
+        display: contents;
+    }
+
+    .reach-out-form input[type="text"],
+    .reach-out-form input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+        height: 1rem;
+        padding: .5rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: .5rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .reach-out-form input[type="email"] {
+        grid-column: 1 / -1; 
+    }
+
+    .reach-out-form button.submit {
+        grid-column: 1 / -1; 
+        height: 1rem;
+        border: none;
+        border-radius: 100px;
+        background-color: white;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: .5rem;
+        color: #01A3EB;
+        cursor: pointer;
+}
+
+    .reach-out-form textarea {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1; 
+        height: 3vh;
+        padding: 1rem;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: .5rem;
+        color: rgba(255, 255, 255, 0.75);
+        resize: none; 
+    }
+
+    footer {
+        margin-top: 4rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        font-family: 'Instrument Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: .75rem;
+        color: white;
+    }
+
+    .social-media {
+        display: flex;            
+        align-items: center; 
+        gap: 1rem;   
+    }
+
+    .social-media img {
+        width: 1rem;
+        height: auto;
+        cursor: pointer;
+    }
+}
